@@ -9,6 +9,9 @@ spec:
     matchLabels:
       app: rabbitmq
   template:
+    metadata:
+      labels:
+        app: rabbitmq
     spec:
       containers:
       - name: rabbitmq

@@ -9,6 +9,9 @@ spec:
     matchLabels:
       app: worker
   template:
+    metadata:
+      labels:
+        app: worker
     spec:
       containers:
       - name: worker
