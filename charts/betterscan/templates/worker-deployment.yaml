@@ -16,6 +16,9 @@ spec:
       containers:
       - name: worker
         image: scanmycode/scanmycode3-ce:worker
+        volumeMounts:
+        - name: hosts-config
+          mountPath: /etc/hosts
         workingDir: /srv/scanmycode/
         command: ["/bin/sh", "-c"]
         args: ["python /srv/scanmycode/manage.py runworker"]
@@ -25,6 +28,9 @@ spec:
         - name: server2
           mountPath: /srv/scanmycode/quantifiedcode/backend/data/tasks/
       volumes:
+        - name: hosts-config
+          configMap:
+            name: custom-hosts  
         - name: server1
           persistentVolumeClaim:
             claimName: pvc-for-server1
