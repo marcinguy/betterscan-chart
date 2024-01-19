@@ -1,6 +1,6 @@
 
 apiVersion: apps/v1
-kind: Deployment
+kind: Pod
 metadata:
   name: rabbitmq
 spec:
@@ -16,6 +16,11 @@ spec:
       containers:
       - name: rabbitmq
         image: rabbitmq:3.8-management-alpine
+        env:
+          - name: RABBITMQ_DEFAULT_USER
+            value: qc
+          - name: RABBITMQ_DEFAULT_PASS
+            value: qc
         ports:
         - containerPort: 5672
         - containerPort: 15672
