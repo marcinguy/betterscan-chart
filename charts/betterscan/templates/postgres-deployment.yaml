@@ -12,8 +12,8 @@ spec:
     metadata:
       labels:
         app: postgres
-      hostname: postgres
     spec:
+      hostname: postgres
       containers:
       - name: postgres
         image: postgres:13.2

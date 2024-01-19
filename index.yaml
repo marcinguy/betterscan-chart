@@ -3,12 +3,12 @@ entries:
   betterscan:
   - apiVersion: v2
     appVersion: 0.9.9
-    created: "2024-01-19T15:15:04.169253775+01:00"
+    created: "2024-01-19T15:27:41.762116871+01:00"
     description: A Helm chart for Kubernetes
-    digest: ecc1e5f3f0029d8e297ec47b856d99f8acbfb3dcc546d777b68e5900e8346774
+    digest: aaa6185e4748ae1fea355a90f6c3a747ec31f687cb8e0bbdffc33f8bef200ee7
     icon: https://assets-global.website-files.com/6339e3b81867539b5fe2498d/633a1643dcb06d3029867161_g4.svg
     name: betterscan
     urls:
     - https://marcinguy.github.io/betterscan-chart/betterscan-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-19T15:15:04.16902694+01:00"
+generated: "2024-01-19T15:27:41.761897719+01:00"

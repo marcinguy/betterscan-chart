@@ -12,8 +12,8 @@ spec:
     metadata:
       labels:
         app: rabbitmq
-      hostname: rabbitmq
     spec:
+      hostname: rabbitmq
       containers:
       - name: rabbitmq
         image: rabbitmq:3.8-management-alpine
