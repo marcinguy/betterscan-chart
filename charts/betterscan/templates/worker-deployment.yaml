@@ -16,3 +16,15 @@ spec:
       containers:
       - name: worker
         image: scanmycode/scanmycode3-ce:worker
+        volumeMounts:
+        - name: server1
+          mountPath: /srv/scanmycode/quantifiedcode/data/repositories/
+        - name: server2
+          mountPath: /srv/scanmycode/quantifiedcode/backend/data/tasks/
+      volumes:
+        - name: server1
+          persistentVolumeClaim:
+            claimName: pvc-for-server1
+        - name: server2
+          persistentVolumeClaim:
+            claimName: pvc-for-server2
