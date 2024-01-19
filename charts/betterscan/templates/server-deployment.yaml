@@ -29,9 +29,9 @@ spec:
         - name: server2
           mountPath: /srv/scanmycode/quantifiedcode/backend/data/tasks/
       volumes:
-         - name: hosts-config
-           configMap:
-             name: custom-hosts
+        - name: hosts-config
+          configMap:
+            name: custom-hosts
         - name: server1
           persistentVolumeClaim:
             claimName: pvc-for-server1
