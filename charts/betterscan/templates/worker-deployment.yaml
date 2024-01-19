@@ -16,6 +16,8 @@ spec:
       containers:
       - name: worker
         image: scanmycode/scanmycode3-ce:worker
+        command: ["/bin/sh", "-c"]
+        args: ["python /srv/scanmycode/manage.py runworker"]
         volumeMounts:
         - name: server1
           mountPath: /srv/scanmycode/quantifiedcode/data/repositories/
