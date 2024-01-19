@@ -16,6 +16,7 @@ spec:
       containers:
       - name: server
         image: scanmycode/scanmycode3-ce:server
+        workingDir: /srv/scanmycode/
         command: ["/bin/sh", "-c"]
         args: ["python /srv/scanmycode/manage.py setup && python /srv/scanmycode/manage.py runserver"]
         ports:
