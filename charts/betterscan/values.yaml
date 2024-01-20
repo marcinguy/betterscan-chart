@@ -10,11 +10,13 @@ global:
       postgresPassword: "qc"
 
 
-  rabbitmq:
-    auth:
-      username: "qc"
-      password: "qc"
-    service:
-      type: ClusterIP
-      port: 5672
+rabbitmq:
+  username: "qc"
+  password: "qc"
+  auth:
+    username: "qc"
+    password: "qc"
+  service:
+    type: ClusterIP
+    port: 5672
 
