@@ -18,7 +18,7 @@ spec:
         image: scanmycode/scanmycode3-ce:worker
         workingDir: /srv/scanmycode/
         command: ["/bin/sh", "-c"]
-        args: ["chmod +x /scripts/modify-config.sh && /scripts/modify-config.sh && python /srv/scanmycode/manage.py runworker"]
+        args: ["cp /scripts/modify-config.sh /tmp && chmod +x /tmp/modify-config.sh && /tmp/modify-config.sh && python /srv/scanmycode/manage.py runworker"]
         volumeMounts:
         - name: server1
           mountPath: /srv/scanmycode/quantifiedcode/data/repositories/
