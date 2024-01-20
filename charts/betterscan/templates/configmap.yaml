@@ -5,7 +5,7 @@ metadata:
 data:
   modify-config.sh: |
     #!/bin/sh
-    sed -i 's/original_broker_url/amqp:\/\/qc:qc@betterscan-rabbitmq:5672/' /srv/quantifiedcode/settings/default.yml
-    sed -i 's/original_result_backend/rpc:\/\/qc:qc@betterscan-rabbitmq:5672/' /srv/quantifiedcode/settings/default.yml
-    sed -i 's/original_db_url/postgresql:\/\/qc:qc@betterscan-postgres\/qc/' /srv/quantifiedcode/settings/default.yml
+    sed -i 's/original_broker_url/amqp:\/\/qc:qc@betterscan-rabbitmq:5672/' /srv/scanmycode/quantifiedcode/settings/default.yml
+    sed -i 's/original_result_backend/rpc:\/\/qc:qc@betterscan-rabbitmq:5672/' /srv/scanmycode/quantifiedcode/settings/default.yml
+    sed -i 's/original_db_url/postgresql:\/\/qc:qc@betterscan-postgres\/qc/' /srv/scanmycode/quantifiedcode/settings/default.yml
 
