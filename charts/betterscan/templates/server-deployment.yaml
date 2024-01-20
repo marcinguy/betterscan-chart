@@ -19,7 +19,7 @@ spec:
         command: ["/bin/sh", "/scripts/modify-config.sh"]
         volumeMounts:
         - name: config
-          mountPath: /srv/scanmycode/quantifiedcode/settings/
+          mountPath: /
         - name: script-volume
           mountPath: /scripts
       containers:
