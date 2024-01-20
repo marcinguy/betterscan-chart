@@ -13,34 +13,18 @@ spec:
       labels:
         app: worker
     spec:
-      initContainers:
-      - name: init-modify-config
-        image: alpine  # or another image that includes sed and sh
-        workingDir: /srv/scanmycode/quantifiedcode/settings/
-        command: ["/bin/sh", "/scripts/modify-config.sh"]
-        volumeMounts:
-        - name: config
-          mountPath: /srv/scanmycode/quantifiedcode/settings/
-        - name: script-volume
-          mountPath: /scripts
-
       containers:
       - name: worker
         image: scanmycode/scanmycode3-ce:worker
         workingDir: /srv/scanmycode/
         command: ["/bin/sh", "-c"]
-        args: ["python /srv/scanmycode/manage.py runworker"]
+        args: ["/scripts/modify-config.sh && python /srv/scanmycode/manage.py runworker"]
         volumeMounts:
-        - name: config
-          mountPath: /srv/scanmycode/quantifiedcode/settings/
         - name: server1
           mountPath: /srv/scanmycode/quantifiedcode/data/repositories/
         - name: server2
           mountPath: /srv/scanmycode/quantifiedcode/backend/data/tasks/
       volumes:
-        - name: config
-          persistentVolumeClaim:
-            claimName: pvc-config
         - name: server1
           persistentVolumeClaim:
             claimName: pvc-for-server1
