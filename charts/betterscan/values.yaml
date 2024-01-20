@@ -1,7 +1,4 @@
 postgresql:
-  postgresqlUsername: "qc"
-  postgresqlPassword: "qc"
-  postgresqlDatabase: "qc"
   service:
     type: ClusterIP
     port: 5432
@@ -12,3 +9,11 @@ rabbitmq:
   service:
     type: ClusterIP
     port: 5672
+
+global:
+  postgresql:
+    auth: 
+      username: "qc"
+      password: "qc"
+      database: "qc"
+
