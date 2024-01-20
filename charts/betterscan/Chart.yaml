@@ -4,3 +4,12 @@ description: A Helm chart for Kubernetes
 icon: https://assets-global.website-files.com/6339e3b81867539b5fe2498d/633a1643dcb06d3029867161_g4.svg
 name: betterscan
 version: 0.1.0
+
+dependencies:
+  - name: postgresql
+    version: 13.2
+    repository: https://charts.bitnami.com/bitnami
+
+  - name: rabbitmq
+    version: 12.8.0
+    repository: https://charts.bitnami.com/bitnami

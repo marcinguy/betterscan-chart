@@ -1,4 +1,14 @@
-
-# Default values for scanmycode-chart.
-# This is a YAML-formatted file.
-# Declare variables to be passed into your templates.
+postgresql:
+  postgresqlUsername: "qc"
+  postgresqlPassword: "qc"
+  postgresqlDatabase: "qc"
+  service:
+    type: ClusterIP
+    port: 5432
+rabbitmq:
+  auth:
+    username: "qc"
+    password: "qc"
+  service:
+    type: ClusterIP
+    port: 5672

@@ -13,6 +13,15 @@ spec:
       labels:
         app: server
     spec:
+      initContainers:
+      - name: init-modify-config
+        image: alpine  # or another image that includes sed and bash
+        command: ["/bin/bash", "/scripts/modify-config.sh"]
+        volumeMounts:
+        - name: config
+          mountPath: /srv/scanmycode/quantifiedcode/settings/
+        - name: script-volume
+          mountPath: /scripts
       containers:
       - name: server
         image: scanmycode/scanmycode3-ce:server
@@ -22,19 +31,22 @@ spec:
         ports:
         - containerPort: 5000
         volumeMounts:
-        - name: hosts-config
-          mountPath: /etc/hosts
+        - name: config
+          mountPath: /srv/scanmycode/quantifiedcode/settings/
         - name: server1
           mountPath: /srv/scanmycode/quantifiedcode/data/repositories/
         - name: server2
           mountPath: /srv/scanmycode/quantifiedcode/backend/data/tasks/
       volumes:
-        - name: hosts-config
-          configMap:
-            name: custom-hosts
+        - name: config
+          persistentVolumeClaim:
+            claimName: pvc-config
         - name: server1
           persistentVolumeClaim:
             claimName: pvc-for-server1
         - name: server2
           persistentVolumeClaim:
             claimName: pvc-for-server2
+        - name: script-volume
+          configMap:
+            name: config-script
