@@ -16,6 +16,7 @@ spec:
       initContainers:
       - name: init-modify-config
         image: alpine  # or another image that includes sed and sh
+        workingDir: /srv/scanmycode/quantifiedcode/settings/
         command: ["/bin/sh", "/scripts/modify-config.sh"]
         volumeMounts:
         - name: config
