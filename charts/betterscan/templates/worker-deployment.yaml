@@ -15,7 +15,7 @@ spec:
     spec:
       initContainers:
       - name: init-modify-config
-        image: alpine  # or another image that includes sed and bash
+        image: bash  # or another image that includes sed and bash
         command: ["/bin/bash", "/scripts/modify-config.sh"]
         volumeMounts:
         - name: config
