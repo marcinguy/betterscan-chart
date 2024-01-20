@@ -9,5 +9,5 @@ spec:
     - protocol: TCP
       port: 5000     # Port to expose on the service
       targetPort: 5000  # Port on the pods to forward traffic to
-  type: NodePort  # Use the appropriate service type (ClusterIP, NodePort, LoadBalancer, etc.)
+  type: LoadBalancer  # Use the appropriate service type (ClusterIP, NodePort, LoadBalancer, etc.)
 
