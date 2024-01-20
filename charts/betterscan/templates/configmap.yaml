@@ -7,6 +7,6 @@ data:
     #!/bin/sh
     ls -la
     pwd
-    sed -i 's/postgresql:\/\/qc:qc@postgres\/qc/postgresql:\/\/qc:qc@betterscan-postgres\/qc/' quantifiedcode/settings/default.yml
+    sed -i 's/postgresql:\/\/qc:qc@postgres\/qc/postgresql:\/\/qc:qc@betterscan-postgresql\/qc/' quantifiedcode/settings/default.yml
     sed -i "s|broker_url: 'amqp://qc:qc@rabbitmq:5672'|broker_url: 'amqp://qc:qc@betterscan-rabbitmq:5672'|g" quantifiedcode/settings/default.yml
     sed -i "s|result_backend: 'rpc://qc:qc@rabbitmq:5672'|result_backend: 'rpc://qc:qc@betterscan-rabbitmq:5672'|g" quantifiedcode/settings/default.yml

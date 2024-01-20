@@ -6,7 +6,7 @@ name: betterscan
 version: 0.1.0
 
 dependencies:
-  - name: postgres
+  - name: postgresql
     version: 13.2
     repository: https://charts.bitnami.com/bitnami
 

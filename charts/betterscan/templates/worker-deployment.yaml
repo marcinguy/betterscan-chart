@@ -20,6 +20,8 @@ spec:
         command: ["/bin/sh", "-c"]
         args: ["cp /scripts/modify-config.sh /tmp && chmod +x /tmp/modify-config.sh && /tmp/modify-config.sh && python /srv/scanmycode/manage.py runworker"]
         volumeMounts:
+        - name: script-volume
+          mountPath: /scripts
         - name: server1
           mountPath: /srv/scanmycode/quantifiedcode/data/repositories/
         - name: server2
