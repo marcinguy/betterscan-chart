@@ -1,0 +1,33 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+apiVersion: v2
+appVersion: 0.9.9
+dependencies:
+- - name: postgresql
+  repository: https://charts.bitnami.com/bitnami
+  version: "13.2"
+- - name: rabbitmq
+  repository: https://charts.bitnami.com/bitnami
+  version: 12.8.0
+description: A Helm chart for Kubernetes
+icon: https://assets-global.website-files.com/6339e3b81867539b5fe2498d/633a1643dcb06d3029867161_g4.svg
+name: betterscan
+version: 0.1.0
+
+...
+files:
+  betterscan-0.1.0.tgz: sha256:6256cfa587c30cb7d7644cbfde455731cbbaa7e8ca2a12f04332bf71ff173b94
+-----BEGIN PGP SIGNATURE-----
+
+wsDcBAEBCgAQBQJlrjkfCRDUxfRxrz4r6gAARHsMAJODK/R7QkX0EGtbb+xClfGn
+1ReKlxEy5PIStMuYDvH+JW90RZJ1PhV63I0Q12Wl/Hcg3TeMKgI1H/rMdW2QOqoK
+sog8uIVijrFjcYYdP5M+AdPkJo6Md8eaaJjEHA3UtITWEigGCUm7PN+B7FYxR9yb
+j9K1icedlYSpo9vae0xsPMMQNEE3CXMKNk5BjVoSiUPBrg+QrdrE5UJwhvUNG7El
+coSnpWMxvcGai347Vc7EiksV8QlEmGn+pRuAhUt8QX765A5G1oEMDj9HNqBfSbcK
+QmfUf16AA7ACWni/LraAu4V08RgMP+lSsV3WilLb0qlt0NSkP+bie8E8pYRN0q7m
+cjhFissf7d/NIiLGMH79vu6gmHt9ojLhjEnoNNvr2f4IzKSL9SfgBlcfDwaV1/1j
+AFIN5W2reJrADNNle0y2DUuOZQnH5K2Pat+kZFLcfdrAW9GJTRWCNaIp1K3lIgoI
+yfYkK7KTbS71EtVGqFFwKV1cF8ghXnL0MN458+6acQ==
+=pPXV
+-----END PGP SIGNATURE-----
