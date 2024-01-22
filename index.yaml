@@ -3,7 +3,7 @@ entries:
   betterscan:
   - apiVersion: v2
     appVersion: 0.9.9
-    created: "2024-01-20T18:47:34.838155182+01:00"
+    created: "2024-01-22T11:46:05.421368805+01:00"
     dependencies:
     - name: postgresql
       repository: https://charts.bitnami.com/bitnami
@@ -12,10 +12,10 @@ entries:
       repository: https://charts.bitnami.com/bitnami
       version: 12.8.0
     description: A Helm chart for Kubernetes
-    digest: cecbd588946e7cbd88cdd11a8b22b475e3a3b4e5e6bd3d06ca7b25c42314b5ad
+    digest: 6256cfa587c30cb7d7644cbfde455731cbbaa7e8ca2a12f04332bf71ff173b94
     icon: https://assets-global.website-files.com/6339e3b81867539b5fe2498d/633a1643dcb06d3029867161_g4.svg
     name: betterscan
     urls:
     - https://marcinguy.github.io/betterscan-chart/betterscan-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-20T18:47:34.830660298+01:00"
+generated: "2024-01-22T11:46:05.416093817+01:00"
