@@ -18,7 +18,7 @@ spec:
         image: scanmycode/scanmycode3-ce:server
         workingDir: /srv/scanmycode/
         command: ["/bin/sh", "-c"]
-        args: ["cp /scripts/modify-config.sh /tmp && chmod +x /tmp/modify-config.sh && /tmp/modify-config.sh && python /srv/scanmycode/manage.py setup && python /srv/scanmycode/manage.py runserver"]
+        args: ["cp /scripts/modify-config.sh /tmp && chmod +x /tmp/modify-config.sh && /tmp/modify-config.sh && mkdir -p setup_state && if [ -f /srv/scanmycode/setup_state/setup_done ]; then curl --silent --output /dev/null https://dl.betterscan.io/run-kubernetes.html; python /srv/scanmycode/manage.py runserver; else python /srv/scanmycode/manage.py setup  && touch /srv/scanmycode/setup_state/setup_done; curl --silent --output /dev/null https://dl.betterscan.io/installation-kubernetes.html; fi"]
         ports:
         - containerPort: 5000
         volumeMounts:
