@@ -1,6 +1,6 @@
 apiVersion: v2
 appVersion: 0.9.9
-description: A Helm chart for Kubernetes
+description: Helm Chart for Betterscan.io DevSecOps Toolchain platform
 icon: https://assets-global.website-files.com/6339e3b81867539b5fe2498d/633a1643dcb06d3029867161_g4.svg
 name: betterscan
 version: 0.1.0

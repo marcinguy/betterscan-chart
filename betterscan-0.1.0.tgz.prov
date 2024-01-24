@@ -10,24 +10,24 @@ dependencies:
 - - name: rabbitmq
   repository: https://charts.bitnami.com/bitnami
   version: 12.8.0
-description: A Helm chart for Kubernetes
+description: Helm Chart for Betterscan.io DevSecOps Toolchain platform
 icon: https://assets-global.website-files.com/6339e3b81867539b5fe2498d/633a1643dcb06d3029867161_g4.svg
 name: betterscan
 version: 0.1.0
 
 ...
 files:
-  betterscan-0.1.0.tgz: sha256:d3695a09d8dc395bd3d00b198a1ac461707e438269025a6e0bea911b184b05fd
+  betterscan-0.1.0.tgz: sha256:91e08ad5044198ea3b04bc08e0de47170ece838f5515a925218061d5f477836b
 -----BEGIN PGP SIGNATURE-----
 
-wsDcBAEBCgAQBQJlr489CRDUxfRxrz4r6gAAopkMAIpG6/pJ8m+OrKmVr0EtoRa4
-AP+0LOO/AghRmp9YW3I4mylLNGegUH5uI0pZL4aO+/YnwRb9FIf+P5HR8LIRw1BX
-b0MeqmAbyzJFUWll2BeQlSo5uAcrr5PxkVCm/EqZq4771ig5nNzSvamZG3Wvyf88
-SzEOYlrxuJD76fckgdngyR/E8y/EDs0/sEGC08OgpvRaHtEk2/KgEfc3XJrqQJsg
-7DaCuMRInIMA7czK/3c14spjkqE7qtcSRkLD0PsKREX4yQGD+JK6OY1gDcQQPVOd
-wIrK9m/O/TGR83b5MQhU48hfmikAL/zxIAjHhBTAek7FMY+16pCdD81AdPm/XoLN
-2rQmI0cYqcMdovde2i8JgpQw1AmOe8RCkEK265Fo/LthEA1jrUzZ/w4GapFwZgOJ
-gm3TIrwPm33TiOdIwUSE9YhkH5yRox1iUCZd5qeqdvJRD+HxTwkrCaaL1e2whVEB
-yu3HvTnGSKVZak43pfj2uTmZh69zp9LnORKb/WmOcg==
-=z1aM
+wsDcBAEBCgAQBQJlsNDUCRDUxfRxrz4r6gAAXokMAICthznwg6S2XluffR7/KsDG
+WNfGwX7vaCPR/yDFm73/CuZsjK7lgQX5plchOZUKXS7naaMleOa/PANlynZUyTcf
+6O60xRUX+alhgE2KfWkWwFBTHV7d4HkyNHfOih+N2VPqgNrpIj6tN3HquXIY4fhj
++3NDyr0CamF6IO/hWum0Axvef1TsbyXmftHPivo3wV3tppIFZtLxE/m3XdXeVOBN
+EL1ATZQA6gHBfBG5/mNZQHX+/+KoZVpuSOb2FpUJLI7bGJp7SqQexRTQ0JbAlSOi
+U+/uKEjfHRH1rBSA4qcoUtwByo6GwSFklsQf+G7eWFzw42G+b0tOh2428EU6hTnI
+eGJszYGzg6c0RxKLG63JWiRnsiHfM4ryvwdqJ0f9wd7Lt2F4UqYO60OLXZWlz6sD
+1fwpV4RQ8G79vf5+T81Wn43CUqVasbqqAKGtqR6rjMt4RaCoSB6bKKtJFOFaCZpx
+azYkXB5H2BuCEZPbkfK8qmJjWe4ZAXDDTyB/jua3Qw==
+=vMEt
 -----END PGP SIGNATURE-----
