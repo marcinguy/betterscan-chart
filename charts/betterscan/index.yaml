@@ -1,3 +1,82 @@
 apiVersion: v1
-entries: {}
-generated: "2024-01-19T12:11:54.47391065+01:00"
+entries:
+  postgresql:
+  - annotations:
+      category: Database
+      images: |
+        - name: os-shell
+          image: docker.io/bitnami/os-shell:11-debian-11-r93
+        - name: postgres-exporter
+          image: docker.io/bitnami/postgres-exporter:0.15.0-debian-11-r5
+        - name: postgresql
+          image: docker.io/bitnami/postgresql:16.1.0-debian-11-r19
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 16.1.0
+    created: "2024-09-06T10:27:55.308843+02:00"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: PostgreSQL (Postgres) is an open source object-relational database
+      known for reliability and data integrity. ACID-compliant, it supports foreign
+      keys, joins, views, triggers and stored procedures.
+    digest: e370aedf58b9841f5b85f8cabc3089865380ef44659da13352c4f584deac9b72
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
+    keywords:
+    - postgresql
+    - postgres
+    - database
+    - sql
+    - replication
+    - cluster
+    maintainers:
+    - name: VMware, Inc.
+      url: https://github.com/bitnami/charts
+    name: postgresql
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/postgresql
+    urls:
+    - charts/postgresql-13.2.30.tgz
+    version: 13.2.30
+  rabbitmq:
+  - annotations:
+      category: Infrastructure
+      images: |
+        - name: os-shell
+          image: docker.io/bitnami/os-shell:11-debian-11-r94
+        - name: rabbitmq
+          image: docker.io/bitnami/rabbitmq:3.12.12-debian-11-r3
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 3.12.12
+    created: "2024-09-06T10:27:55.310844+02:00"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: RabbitMQ is an open source general-purpose message broker that is
+      designed for consistent, highly-available messaging scenarios (both synchronous
+      and asynchronous).
+    digest: c44d23964ba5e84501ea100f3844fb74f2d42d800c9fd5673d4d237034cf3b3b
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/rabbitmq/img/rabbitmq-stack-220x234.png
+    keywords:
+    - rabbitmq
+    - message queue
+    - AMQP
+    maintainers:
+    - name: VMware, Inc.
+      url: https://github.com/bitnami/charts
+    name: rabbitmq
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/rabbitmq
+    urls:
+    - charts/rabbitmq-12.8.0.tgz
+    version: 12.8.0
+generated: "2024-09-06T10:27:55.305615+02:00"
