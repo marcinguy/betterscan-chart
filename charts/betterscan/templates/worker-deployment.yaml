@@ -15,17 +15,17 @@ spec:
     spec:
       containers:
       - name: worker
-        image: scanmycode/scanmycode3-ce:worker
-        workingDir: /srv/scanmycode/
+        image: sunsolution/betterscan-worker:latest
+        workingDir: /srv/betterscan/
         command: ["/bin/sh", "-c"]
-        args: ["cp /scripts/modify-config.sh /tmp && chmod +x /tmp/modify-config.sh && /tmp/modify-config.sh && python /srv/scanmycode/manage.py runworker"]
+        args: ["cp /scripts/modify-config.sh /tmp && chmod +x /tmp/modify-config.sh && /tmp/modify-config.sh && python /srv/betterscan/manage.py runworker"]
         volumeMounts:
         - name: script-volume
           mountPath: /scripts
         - name: server1
-          mountPath: /srv/scanmycode/quantifiedcode/data/repositories/
+          mountPath: /srv/betterscan/quantifiedcode/data/repositories/
         - name: server2
-          mountPath: /srv/scanmycode/quantifiedcode/backend/data/tasks/
+          mountPath: /srv/betterscan/quantifiedcode/backend/data/tasks/
       volumes:
         - name: server1
           persistentVolumeClaim:

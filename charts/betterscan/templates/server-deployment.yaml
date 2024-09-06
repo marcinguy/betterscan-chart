@@ -15,19 +15,19 @@ spec:
     spec:
       containers:
       - name: server
-        image: scanmycode/scanmycode3-ce:server
-        workingDir: /srv/scanmycode/
+        image: sunsolution/betterscan-server:latest
+        workingDir: /srv/betterscan/
         command: ["/bin/sh", "-c"]
-        args: ["cp /scripts/modify-config.sh /tmp && chmod +x /tmp/modify-config.sh && /tmp/modify-config.sh && python /srv/scanmycode/manage.py setup && python /srv/scanmycode/manage.py runserver && curl --silent --output /dev/null https://dl.betterscan.io/run-kubernetes.html"]
+        args: ["cp /scripts/modify-config.sh /tmp && chmod +x /tmp/modify-config.sh && /tmp/modify-config.sh && python /srv/betterscan/manage.py setup && python /srv/betterscan/manage.py runserver"]
         ports:
         - containerPort: 5000
         volumeMounts:
         - name: script-volume
           mountPath: /scripts
         - name: server1
-          mountPath: /srv/scanmycode/quantifiedcode/data/repositories/
+          mountPath: /srv/betterscan/quantifiedcode/data/repositories/
         - name: server2
-          mountPath: /srv/scanmycode/quantifiedcode/backend/data/tasks/
+          mountPath: /srv/betterscan/quantifiedcode/backend/data/tasks/
       volumes:
         - name: server1
           persistentVolumeClaim:
